@@ -15,12 +15,12 @@ touch .env
 3. Install dependencies
 
 ```
-yarn install
+npm install
 ```
 
 4. Run the dev build command
 ```
-yarn run dev
+npm run dev
 ```
 
 5. Server the website on local
