@@ -10,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: mkdir pub && cp -avf -t pub css images team CNAME index.html
+      - uses: actions/setup-node@v1
+      - run: touch .env
+      - run: npm install
+      - run: npm run build
+      - run: mkdir pub && rm dist/.gitignore && cp -avf -t pub dist index.html CNAME favicon.ico
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
