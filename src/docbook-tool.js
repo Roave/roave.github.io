@@ -31,7 +31,7 @@
 
         const pathParts = path.split("/");
 
-        let pageTitle = 'Page Title';
+        let pageTitle = document.title;
 
         if (pathParts.length >= 1) {
             const topTabLink = document.querySelector('#top-nav-tabs a[href="#' + pathParts[0] + '"]');
